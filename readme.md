@@ -8,7 +8,7 @@
 <h2 align="center">AcoBot Web Application</h2>
   <br/>
   <p align="center">
-    This project is an interactive web application to remotely control an easy-to-assemble setup that contains a commercial Chladni plate, a camera, and a vibration generator. The application allows remote multiple-user access to the setup, including a number of functions, such as multiple particles manipulation and execution of user-specified commands on the plate, as well as video recording and live streaming. Together with the setup, the web application constitutes an easy-to-assemble robotic kit that can be used both in educational and research activities.
+    This project is an interactive web application to remotely control an easy-to-assemble setup that contains a commercial Chladni plate, a camera, and a vibration generator. The application allows remote multiple-user access to the setup, including a number of functions, such as multiple-particle manipulation and execution of user-specified commands on the plate, as well as video recording and live streaming. Together with the setup, the web application constitutes an easy-to-assemble robotic kit that can be used both in educational and research activities.
 
   </p>
 </div>
@@ -33,7 +33,6 @@
       <a href="#how-to-update-code">How to update code</a>
       <ul>
         <li><a href="#how-to-update-backend-part">How to update backend part</a></li>
-        <li><a href="#how-to-update-frontend-part">How to update frontend</a></li>
       </ul>
     </li>
   </ol>

@@ -169,8 +169,8 @@ To get a local copy up and running, follow these steps.
 1. Clone the repo and navigate to its directory.
 
    ```sh
-   git clone https://version.aalto.fi/gitlab/acobotwebversion/acobot.git
-   cd acobot
+   git clone https://github.com/ArtKop/AcoBotWebVersion.git
+   cd AcoBotWebVersion
    ```
 
 2. Create a virtual environment and install all dependencies inside the virtual environment using [conda](https://docs.conda.io/en/latest/miniconda.html).
@@ -179,7 +179,7 @@ To get a local copy up and running, follow these steps.
    - Create a virtual environment using acobot.yml file in the root folder.
      ```sh
      #Windows
-     conda env create -f acobot.yml
+     conda env create -f acobot.yaml
      ```
    - Activate the virtual environment
      ```sh
@@ -188,7 +188,7 @@ To get a local copy up and running, follow these steps.
 
 3. Install all PyCapture library in order to use the camera.
 
-   - Run the [FlyCapture2 SDK](https://www.flir.com/products/flycapture-sdk/) installer: FlyCapture_2.13.3.31_x64.exe
+   - Run the [FlyCapture2 SDK](https://www.flir.com/products/flycapture-sdk/)
 
    - Run the PyCapture2-2.13.61.win-amd64-py3.6.msi installer to install the PyCapture2 python module into the created virtual environment.
 
@@ -205,7 +205,7 @@ To get a local copy up and running, follow these steps.
    conda activate acobot
    python server.py
    ```
-   Then, the application can is hosted on the address: http://127.0.0.1:5000 .
+   Then, the application can is hosted on the address: http://127.0.0.1:5000.
    <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
@@ -367,214 +367,3 @@ The entry point of the web application is the login page where users can log in 
 ## How to update code
 
 <br/>
-
-### How to update backend part
-
-<br/>
-The backend code is contained in this repository and its structure is shown in the following picture.
-
-```
-|-- acobot
-    |-- acobot.yaml
-    |-- amplitude_experiment_parameters.json
-    |-- commandDoc.txt
-    |-- config.py
-    |-- readme.md
-    |-- dict.txt
-    |-- FlyCapture_2.13.3.31_x64.exe
-    |-- PyCapture2-2.13.61.win-amd64-py3.6.msi
-    |-- server.py
-    |-- app
-        |-- models.py
-        |-- sockets.py
-        |-- __init__.py
-        |-- api
-            |-- errors.py
-            |-- global_variables.py
-            |-- ampExp
-              |-- routes.py
-              |-- __init__.py
-            |-- auth
-              |-- routes.py
-              |-- __init__.py
-            |-- blobDetector
-              |-- routes.py
-              |-- __init__.py
-            |-- command
-              |-- routes.py
-              |-- __init__.py
-            |-- camera
-              |-- routesCombine.py
-              |-- __init__.py
-            |-- dataCollecting
-              |-- routesCombine.py
-              |-- __init__.py
-            |-- modelFitting
-              |-- routesCombine.py
-              |-- __init__.py
-            |-- objectManipulation
-              |-- routesCombine.py
-              |-- __init__.py
-        |-- hardware
-            |-- controllers
-              |--defualtController.py
-            |--acoustic2Camera.py
-            |--acoustic2Sound.py
-            |-- ampMain.py
-            |-- camera_opencv.py
-            |-- dataCollection.py
-            |-- funs.py
-            |--modelFitting.py
-            |--munkres_solver.py
-            |-- objectManipulation.py
-    |-- ampExp
-    |-- DataCollecting
-    |-- ModelFitting
-    |-- tunedAmp
-    |-- video
-    |--images
-```
-
-- The acobot.yaml is used to create the virtual environment for the application using conda.
-
-- The FlyCapture_2.13.3.31_x64.exe and PyCapture2-2.13.61.win-amd64-py3.6.msi files are the installer files for the pyCapture package.
-
-- The server.py file in the top-level folder is used to launch the application.
-
-- The config.py file is used to specify configuration options for the application.
-
-- The amplitude_experiment_parameters.json, commandDoc.txt, config.py and dict.txt files are used inside the application.
-
-- The build folder in the top-level folder contains the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) of the frontend part of the application which is created with command [npm run build](https://github.com/facebook/create-react-app#npm-run-build-or-yarn-build) in the [frontend part](https://version.aalto.fi/gitlab/acobotwebversion/acobot_frontend.git).
-
-- The app folder contains the source code which contains the api folder and the hardware folder which contains scripts needed when run different experiment, e.g, the ampMain.py is used to start the <a href="#Amplitude experiment">Amplitude experiment</a>.
-  And the api folder contains the the route functions for endpoint, e.g., the ampExp folder contains the route functions related to the request to the <a href="#Amplitude experiment">Amplitude experiment</a>.
-
-- The rest of the other folders in the root folder contain the results of the experiments. For example, the ampExp folder contains the result of the <a href="#Amplitude experiment">Amplitude experiment</a>.
-
-Developers can change the specific code in the app folder then restart the server.py again.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-<br/>
-
-### How to update frontend part
-
-<br/>
-You can find the corresponding code of the frontend [here](https://version.aalto.fi/gitlab/acobotwebversion/acobot_frontend).
-
-The structure of the frontend:
-
-```
-|-- 📂acobot-frontend
-    |-- 📂build
-        |--📂static
-        |-- 📂css
-        |-- 📂js
-        |--📂media
-        |-- 📂public
-        |--📜index.html
-        |--📜manifest.json
-    |-- 📂src
-        |-- 📂components
-            |--📜AppTopBar.js
-            |--📜ErrorNotification.js
-            |--📜Notification.js
-        |--📂images
-            |--📜acoustic_manipulation.jpg
-            |--📜butterflyBlob.png
-            |--📜butterflyBlobChanged.png
-            |--📜login.png
-            |--📜videoStart.png
-        |-- 📂pages
-            |--📂AmpExp
-                |--📜AlertForm.js
-                |--📜AmpExp.css
-                |--📜AmpExp.js
-                |--📜Drawer.js
-                |--📜index.js
-            |--📂BlobDetector
-                |--📜BlobDetector.css
-                |--📜BlobDetector.js
-                |--📜index.js
-            |--📂Camera
-                |--📜Camera.js
-                |--📜index.js
-            |--📂Command
-                |--📜CodeEditor.js
-                |--📜Command.css
-                |--📜Command.js
-                |--📜index.js
-            |--📂DataCollecting
-                |--📜DataCollecting.js
-                |--📜index.js
-            |--📂Home
-                |--📜Home.js
-                |--📜index.js
-            |--📂Login
-                |--📜index.js
-                |--📜Login.css
-                |--📜Login.js
-                |--📜SignIn.js
-                |--📜SignUp.js
-            |-- 📂ModelFitting
-                |--📜index.js
-                |--📜ModelFitting.js
-            |-- 📂ObjectManipulation
-                |--📜index.js
-                |--📜ObjectManipulation.js
-            |--📂StudentPage
-               |-- 📜Camera.js
-               |--📜index.js
-        |-- 📂services
-            |--📜ampExp.js
-            |--📜blobDetector.js
-            |--📜camera.js
-            |--📜command.js
-            |--📜dataCollecting.js
-            |--📜login.js
-            |--📜modelFitting.js
-            |--📜objectManipulation.js
-        |--📂state
-            |--📜index.js
-            |--📜reducer.js
-            |--📜state.js
-        |--📂utils
-             |--📜boxSelection.js
-            |--📜serviceDispatch.js
-        |-- 📜App.css
-        |-- 📜App.js
-        |-- 📜index.js
-    |-- 📜.gitignore
-    |-- 📜package-lock.json
-    |-- 📜package.json
-```
-
-- The package.json file contains information about the frontend of the project, including the name and version of the application, the list of dependency packages and a set of useful development scripts for communicating with React.
-
-- The public/index.html file defines a "div" element with its "id" set to "root" where all the components of the application are loaded into.
-
-- The "src/index.js" accesses the "root" element from "public/index.html" so that the App Component can be loaded into the "root" HTML element. It also imports "src/App.js" file and creates the "< App />" element.
-
-- While the "src/App.js" defines the App component which is the main component in React and acts as a container for all other sub-component ("X.js"). It also imports "src/service.js" to give access to the back-end API.
-- The build folder contains the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) of the frontend which can be served in the [backend](https://version.aalto.fi/gitlab/acobotwebversion/acobot.git).
-
-Steps to update the user interface of the application:
-
-1. Make sure [npm](https://docs.npmjs.com/about-npm) is installed in your computer.
-2. Clone the repository of the frontend.
-   ```sh
-   git clone https://version.aalto.fi/gitlab/acobotwebversion/acobot_frontend.git
-   cd acobot_frontend
-   ```
-3. Install the dependencies.
-   ```sh
-   npm install
-   ```
-4. Make changes to the source code.
-5. Created the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) of the updated version of frontend with command [npm run build](https://github.com/facebook/create-react-app#npm-run-build-or-yarn-build)
-   ```sh
-   npm  run build
-   ```
-6. Replace the build folder in the [backend](https://version.aalto.fi/gitlab/acobotwebversion/acobot.git) with the one created in the frontend.
-
-<p align="right">(<a href="#top">back to top</a>)</p>

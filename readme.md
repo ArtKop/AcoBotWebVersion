@@ -366,3 +366,92 @@ The entry point of the web application is the login page where users can log in 
 ## How to update code
 
 <br/>
+
+### How to update backend part
+
+<br/>
+The backend code is contained in this repository and its structure is shown in the following picture.
+
+```
+|-- acobot
+    |-- acobot.yaml
+    |-- amplitude_experiment_parameters.json
+    |-- commandDoc.txt
+    |-- config.py
+    |-- readme.md
+    |-- dict.txt
+    |-- FlyCapture_2.13.3.31_x64.exe
+    |-- PyCapture2-2.13.61.win-amd64-py3.6.msi
+    |-- server.py
+    |-- app
+        |-- models.py
+        |-- sockets.py
+        |-- __init__.py
+        |-- api
+            |-- errors.py
+            |-- global_variables.py
+            |-- ampExp
+              |-- routes.py
+              |-- __init__.py
+            |-- auth
+              |-- routes.py
+              |-- __init__.py
+            |-- blobDetector
+              |-- routes.py
+              |-- __init__.py
+            |-- command
+              |-- routes.py
+              |-- __init__.py
+            |-- camera
+              |-- routesCombine.py
+              |-- __init__.py
+            |-- dataCollecting
+              |-- routesCombine.py
+              |-- __init__.py
+            |-- modelFitting
+              |-- routesCombine.py
+              |-- __init__.py
+            |-- objectManipulation
+              |-- routesCombine.py
+              |-- __init__.py
+        |-- hardware
+            |-- controllers
+              |--defualtController.py
+            |--acoustic2Camera.py
+            |--acoustic2Sound.py
+            |-- ampMain.py
+            |-- camera_opencv.py
+            |-- dataCollection.py
+            |-- funs.py
+            |--modelFitting.py
+            |--munkres_solver.py
+            |-- objectManipulation.py
+    |-- ampExp
+    |-- DataCollecting
+    |-- ModelFitting
+    |-- tunedAmp
+    |-- video
+    |--images
+```
+
+- The acobot.yaml is used to create the virtual environment for the application using conda.
+
+- The FlyCapture_2.13.3.31_x64.exe and PyCapture2-2.13.61.win-amd64-py3.6.msi files are the installer files for the pyCapture package.
+
+- The server.py file in the top-level folder is used to launch the application.
+
+- The config.py file is used to specify configuration options for the application.
+
+- The amplitude_experiment_parameters.json, commandDoc.txt, config.py and dict.txt files are used inside the application.
+
+- The build folder in the top-level folder contains the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) of the frontend part of the application which is created with command [npm run build](https://github.com/facebook/create-react-app#npm-run-build-or-yarn-build) in the [frontend part](https://version.aalto.fi/gitlab/acobotwebversion/acobot_frontend.git).
+
+- The app folder contains the source code which contains the api folder and the hardware folder which contains scripts needed when run different experiment, e.g, the ampMain.py is used to start the <a href="#Amplitude experiment">Amplitude experiment</a>.
+  And the api folder contains the the route functions for endpoint, e.g., the ampExp folder contains the route functions related to the request to the <a href="#Amplitude experiment">Amplitude experiment</a>.
+
+- The rest of the other folders in the root folder contain the results of the experiments. For example, the ampExp folder contains the result of the <a href="#Amplitude experiment">Amplitude experiment</a>.
+
+Developers can change the specific code in the app folder then restart the server.py again.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+<br/>

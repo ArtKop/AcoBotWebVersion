@@ -268,11 +268,11 @@ The entry point of the web application is the login page where users can log in 
         <img src="images/blob.gif" alt="Logo" width="980" >
     </div>
 
-5. Experiment conducting
+5. Experiments
 
-- <a href="#Amplitude experiment">Amplitude experiment</a>: User can do the amplitude experiment using this application, and this is the basis of the following experiment.
+- <a href="#Amplitude experiment">Amplitude experiment</a>: User can execute the amplitude tuning experiment using this application, which serves the basis for the following experiments.
 
-  The web page also displays the messages sent from the server for the duration of the experiment including three levels: error messages, warning messages, and info messages. The error messages show the reason why the experiment is terminated, the warning messages show that the experiment is paused and needs to be resumed, and the info messages show the process status.
+  The web page also displays the messages sent from the server for the duration of the experiment including three levels: error messages, warning messages, and info messages. The error messages show the reason why the experiment is terminated; the warning messages show that the experiment is paused and needs to be resumed; the info messages show the process status.
 
   - First, open the camera in the camera page.
 
@@ -289,9 +289,9 @@ The entry point of the web application is the login page where users can log in 
   </div>
   <br />
 
-  > **_NOTE:_** When the experiment is finished, a folder containing all the images of the experiment will be created in the amp folder and a csv data file containing the tuned amplitudes data will be created in the tunedAmp folder. The data file will be useful in the following experiments.
+  > **_NOTE:_** When the experiment is finished, a folder containing all the images of the experiment will be created in the amp folder, and a csv data file containing the tuned amplitudes data will be created in the tunedAmp folder. The data file will be useful in the following experiments.
 
-- <a href="#Data Collecting">Data Collecting</a> : After finishing the amplitude experiment, users can collect the data of particle positions and displacements produced by signals of the amplitudes resulted from the amplitude experiment. The experiment results in a csv data file containing the displacement data of particles across the plate excited by signals of different frequencies and the corresponding amplitudes.
+- <a href="#Data Collecting">Data collecting</a>: After finishing the amplitude experiment, users can collect the data of particle positions and displacements produced by signals of the amplitudes resulted from the amplitude experiment. The experiment results in a csv data file containing the displacement data of particles across the plate excited by signals of different frequencies and the corresponding amplitudes.
 
   - First, open the camera in the camera page.
 

@@ -99,7 +99,6 @@ The whole process of acoustic manipulation can be divided into four steps:
   The camera is mounted on a metallic platform above the vibration generator and the plate to provide a top-view of the plate. The camera is used to take images of the plate from above.
 
   - Model: Point Grey BlackFly
-  - Specs: See Section 5
   - Lens: 18mm, c-connector
   <br />
   <div align="center">

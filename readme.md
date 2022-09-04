@@ -371,15 +371,13 @@ The entry point of the web application is the login page where users can log in 
 The backend code is contained in this repository and its structure is shown in the following picture.
 
 ```
-|-- acobot
+|-- AcoBotWebVersion
     |-- acobot.yaml
     |-- amplitude_experiment_parameters.json
     |-- commandDoc.txt
     |-- config.py
     |-- readme.md
     |-- dict.txt
-    |-- FlyCapture_2.13.3.31_x64.exe
-    |-- PyCapture2-2.13.61.win-amd64-py3.6.msi
     |-- server.py
     |-- app
         |-- models.py
@@ -404,32 +402,31 @@ The backend code is contained in this repository and its structure is shown in t
               |-- routesCombine.py
               |-- __init__.py
             |-- dataCollecting
-              |-- routesCombine.py
+              |-- routes.py
               |-- __init__.py
             |-- modelFitting
-              |-- routesCombine.py
+              |-- routes.py
               |-- __init__.py
             |-- objectManipulation
-              |-- routesCombine.py
+              |-- routes.py
               |-- __init__.py
         |-- hardware
             |-- controllers
               |--defualtController.py
-            |--acoustic2Camera.py
-            |--acoustic2Sound.py
+            |-- acoustic2Camera.py
+            |-- acoustic2Sound.py
             |-- ampMain.py
             |-- camera_opencv.py
             |-- dataCollection.py
             |-- funs.py
-            |--modelFitting.py
-            |--munkres_solver.py
+            |-- modelFitting.py
+            |-- munkres_solver.py
             |-- objectManipulation.py
     |-- ampExp
     |-- DataCollecting
     |-- ModelFitting
     |-- tunedAmp
-    |-- video
-    |--images
+    |-- images
 ```
 - The acobot.yaml file is used to create the virtual environment for the application using conda.
 

@@ -208,8 +208,6 @@ To get a local copy up and running, follow these steps.
 
 ## Usage
 
-Use this space to show useful examples of how the project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
 1. Register and log in to the web application.
 <br />
 <div align="center">

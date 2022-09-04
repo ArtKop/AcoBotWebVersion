@@ -124,7 +124,7 @@ class AmpExperiment():
                 frameIn=self.camera.getImage()
                 jpeg=self.applyBlobDetector(frameIn,detector)
                 frameOut = jpeg.tobytes()
-                self.socketInstance.emit('info_image',base64.encodebytes(frameOut).decode("utf-8"),namespace='/amp')
+                self.socketInstance.emit('info_image',base64.encodebytes(frameOut).decode("utf-8"),namespace='/data')
                 
                 # get data from pictures for experiment
                 [movements[i],freqs[i],amps[i],durations[i]] = loadAmpExp(getParticleLocations,MunkresSolver,beforefile,afterfile,detector)

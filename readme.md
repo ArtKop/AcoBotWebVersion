@@ -78,7 +78,7 @@ The whole process of acoustic manipulation can be divided into four steps:
 
   <div id="Object manipulation"></div>
 
-- Object manipulation: The motion of the particles on the plate can be controlled by repeatedly measuring their position and by using the established model to choose the frequency of the signal that moves the particles towards the desired direction.
+- Object manipulation: The motion of the particles on the plate can be controlled by repeatedly measuring their position and by using the established model to choose the frequency of the signal that moves the particles in the desired direction.
 
   <br />
   <div align="center">
@@ -96,7 +96,7 @@ The whole process of acoustic manipulation can be divided into four steps:
 
 - [Camera](https://www.flir.eu/products/blackfly-s-usb3/)
 
-  The camera is mounted above the vibration generator and the plate on a metallic platform with a full top-view of the plate. The camera is used to take images of the plate from above.
+  The camera is mounted on a metallic platform above the vibration generator and the plate to provide a top-view of the plate. The camera is used to take images of the plate from above.
 
   - Model: Point Grey BlackFly
   - Specs: See Section 5
@@ -106,7 +106,7 @@ The whole process of acoustic manipulation can be divided into four steps:
       <img src="images/camera.jpg" alt="Logo" width="180" >
   </div>
 
-- [Chladni Plate, Square](https://www.3bscientific.com/us/chladni-plate-square-1000706-u56006-3b-scientific,p_576_1982.html)
+- [Chladni plate, Square](https://www.3bscientific.com/us/chladni-plate-square-1000706-u56006-3b-scientific,p_576_1982.html)
 
   - Model: 3B Scientific Chladni Plate, square 1000706
   - Material: Steel
@@ -116,7 +116,7 @@ The whole process of acoustic manipulation can be divided into four steps:
       <img src="images/Chladni-Plate-Square.jpg" alt="Logo" width="180" >
   </div>
 
-- [Vibration Generator](https://www.3bscientific.com/us/vibration-generator-1000701-u56001-3b-scientific,p_576_1977.html#recommended)
+- [Vibration generator](https://www.3bscientific.com/us/vibration-generator-1000701-u56001-3b-scientific,p_576_1977.html#recommended)
 
   - Model: 3B Scientific Vibration Generator 1000701
   - Frequency range: 0 - 20 kHz
@@ -137,7 +137,7 @@ The whole process of acoustic manipulation can be divided into four steps:
       <img src="images/tilt.jpg" alt="Logo" width="180" >
   </div>
 
-- [Dayton Amplifier](https://www.daytonaudio.com/product/697/dta-1-class-d-digital-ac-dc-amplifier-15-wpc)
+- [Dayton amplifier](https://www.daytonaudio.com/product/697/dta-1-class-d-digital-ac-dc-amplifier-15-wpc)
 
   - Input connectors: 3.5mm Stereo
   - Frequency response: 20 - 20,000 Hz

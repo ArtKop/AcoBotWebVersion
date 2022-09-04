@@ -18,11 +18,11 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About the project</a>
       <ul>
         <li><a href="#theory">Theory</a></li>
         <li><a href="#hardware">Hardware</a></li>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Built with</a></li>
       </ul>
     </li>
     <li>

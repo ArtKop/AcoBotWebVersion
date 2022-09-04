@@ -311,7 +311,7 @@ The entry point of the web application is the login page where users can log in 
 
 - <a href="#Model fitting">Model fitting</a>: Model fitting is the final preparation step before conducting an object manipulation experiment: the collected displacement data is fitted to a statistical model using the [LOWESS](https://www.itl.nist.gov/div898/handbook/pmd/section1/pmd144.htm) method (with degree=2, span=0.5).
 
-  - First, choose the displacement data file achived from the <a href="#Data Collecting">Data Collecting</a>.
+  - First, choose the displacement data file achived from the <a href="#Data collecting">Data collecting</a>.
 
   - Click the 'start model fitting' button to start the experiment.
   <br />

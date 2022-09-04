@@ -276,7 +276,7 @@ The entry point of the web application is the login page where users can log in 
 
   - First, open the camera in the camera page.
 
-  - Then, open the the setting panel to open the parameters form to set the parameters used in this experiment.
+  - Then, open the setting panel to open the parameters form to set the parameters used in this experiment.
 
   - When ready, click the 'submit' button to submit these parameters to the server.
 
@@ -291,7 +291,7 @@ The entry point of the web application is the login page where users can log in 
 
   > **_NOTE:_** When the experiment is finished, a folder containing all the images of the experiment will be created in the amp folder, and a csv data file containing the tuned amplitudes data will be created in the tunedAmp folder. The data file will be useful in the following experiments.
 
-- <a href="#Data Collecting">Data collecting</a>: After finishing the amplitude experiment, users can collect the data of particle positions and displacements produced by signals of the amplitudes resulted from the amplitude experiment. The experiment results in a csv data file containing the displacement data of particles across the plate excited by signals of different frequencies and the corresponding amplitudes.
+- <a href="#Data collecting">Data collecting</a>: After finishing the amplitude experiment, users can collect the data of particle positions and displacements produced by signals of the amplitudes resulted from the amplitude experiment. The experiment results in a csv data file containing the displacement data of particles across the plate excited by signals of different frequencies and the corresponding amplitudes.
 
   - First, open the camera in the camera page.
 

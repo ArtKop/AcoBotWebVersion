@@ -249,7 +249,7 @@ The entry point of the web application is the login page where users can log in 
 
 3. Command execution
 
-   In the command page, there is a code editor where users can input the script which could be executed in the backend. The acceptable script can only include specified functions and users can view the whole function list by clicking the 'command list' button.
+   In the command page, there is a code editor where users can input the script which could be executed in the backend. The acceptable script can only include specified functions, and users can view the list of acceptable functions by clicking the 'command list' button.
 
    <br />
    <div align="center">
@@ -260,6 +260,7 @@ The entry point of the web application is the login page where users can log in 
     </div>
 
 4. Blob detector
+
    Users can control the parameters of the blob detector to accurately detect the objects on the vibrating plate.
 
   <br />

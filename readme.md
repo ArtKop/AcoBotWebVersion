@@ -49,13 +49,13 @@
     <img src="images/about.jpg" alt="Logo" width="980" >
 </div>
 
-This project is to build a web application for the simplified robotic instrument used for acoustic manipulation method introduced in the [research article](https://www.nature.com/articles/ncomms12764) published in Nature Communications in 2016.
+The aim of this project was to build a web application for a robotic instrument used for the acoustic manipulation method introduced in the [research article](https://www.nature.com/articles/ncomms12764) published in Nature Communications in 2016.
 
 ### Theory
 
 Acoustic manipulation on a vibrating plate is a technique that moves objects on a Chladni plate by sound. A Chladni plate is a centrally actuated vibrating plate, a classic acoustic manipulation device.
 
-The research in acoustic manipulation on the [Robotic Instruments Group](https://www.aalto.fi/en/department-of-electrical-engineering-and-automation/robotic-instruments) showed that the movement of particles on the vibrating plate before they settle on the nodal line is not random and can be statistically predicted and controlled. They introduced a novel approach to control the motion of multiple particles simultaneously and independently on the vibrating plate using only one acoustic actuator. By using a data-driven model to select the frequency of excitation in each control step, the positions of multiple particles on the vibrating plate are simultaneously and independently controlled to the desired position. The schematic of the method and a manipulation example are presented in following figure.
+The research in acoustic manipulation on the [Robotic Instruments Group](https://www.aalto.fi/en/department-of-electrical-engineering-and-automation/robotic-instruments) showed that the movement of particles on the vibrating plate before they settle on the nodal lines is not random and can be statistically predicted, modelled, and controlled. They introduced a novel approach to control the motion of multiple particles simultaneously and independently on the vibrating plate using only one acoustic actuator. By using a data-driven model to select the frequency of excitation in each control step, multiple particles on the vibrating plate are driven to the desired position. The schematic of the method and a manipulation example are presented in following figure.
 <br />
 
 <div align="center">
@@ -70,15 +70,15 @@ The whole process of acoustic manipulation can be divided into four steps:
 
   <div id="Data collecting"></div>
 
-- Data collecting: the displacement of the particles can be obtained by tracking the particle position before and after the excitation. Therefore, a database of the particle position, the frequency of the excited signals, and the resulted displacements can be collected by repeatedly exciting the plate.
+- Data collecting: The displacements of the particles can be obtained by tracking the particle positions before and after excitation. Thereby, a database of the particle positions, the frequencies of the excited signals, and the resulted displacements can be collected by repeatedly exciting the plate.
 
   <div id="Model fitting"></div>
 
-- Model fitting: The experimental data can be used to establish a statistical model of the relationship between the particle displacement and the frequency of the excitation signals. In this manner, the motion of particles can be statistically predicted for a wide spectrum of frequencies.
+- Model fitting: The experimental data can be used to establish a statistical model capturing the relationship between the particle displacement and the frequency of the excitation signal. In this manner, the motion of particles can be statistically predicted for a wide spectrum of frequencies.
 
   <div id="Object manipulation"></div>
 
-- Object manipulation: the motion of the particles on the plate can be controlled by repeatedly measuring their position and by using the established model to choose the frequency of the signal that moves the particles towards the desired directions.
+- Object manipulation: The motion of the particles on the plate can be controlled by repeatedly measuring their position and by using the established model to choose the frequency of the signal that moves the particles towards the desired direction.
 
   <br />
   <div align="center">
@@ -96,7 +96,7 @@ The whole process of acoustic manipulation can be divided into four steps:
 
 - [Camera](https://www.flir.eu/products/blackfly-s-usb3/)
 
-  The camera is mounted above the vibration generator and the plate with a full view of the plate. The camera is used to take images of the plate.
+  The camera is mounted above the vibration generator and the plate on a metallic platform with a full top-view of the plate. The camera is used to take images of the plate from above.
 
   - Model: Point Grey BlackFly
   - Specs: See Section 5
@@ -139,11 +139,11 @@ The whole process of acoustic manipulation can be divided into four steps:
 
 - [Dayton Amplifier](https://www.daytonaudio.com/product/697/dta-1-class-d-digital-ac-dc-amplifier-15-wpc)
 
-  - Input Connectors: 3.5mm Stereo
-  - Frequency Response: 20 - 20,000 Hz
-  - Amplifier Type: Mini Amplifiers
-  - Power Output: 2 x 15 watts RMS
-  - Output Connectors: Spring Loaded Terminals
+  - Input connectors: 3.5mm Stereo
+  - Frequency response: 20 - 20,000 Hz
+  - Amplifier type: Mini Amplifiers
+  - Power output: 2 x 15 watts RMS
+  - Output connectors: Spring Loaded Terminals
   <br />
   <div align="center">
       <img src="images/amplifier.jpg" alt="Logo" width="180" >
@@ -162,7 +162,7 @@ The whole process of acoustic manipulation can be divided into four steps:
 
 ## Installation
 
-This is the instructions on setting up the project locally.
+Here are the instructions on setting up the project locally.
 To get a local copy up and running, follow these steps.
 
 1. Clone the repo and navigate to its directory.
@@ -185,7 +185,7 @@ To get a local copy up and running, follow these steps.
      conda activate acobot
      ```
 
-3. Install all PyCapture library in order to use the camera.
+3. Install all PyCapture libraries in order to use the camera.
 
    - Run the [FlyCapture2 SDK](https://www.flir.com/products/flycapture-sdk/)
 
@@ -209,7 +209,7 @@ To get a local copy up and running, follow these steps.
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Use this space to show useful examples of how the project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 1. Register and log in to the web application.
 <br />
@@ -220,11 +220,11 @@ Use this space to show useful examples of how a project can be used. Additional 
     <img src="images/signup.gif" alt="Logo" width="980" >
 </div>
 
-The entry point of the web application is the login page where users can log in to the application with the existing username and password or can create a new one by clicking sign-up button.
+The entry point of the web application is the login page where users can log in to the application with the existing username and password or create a new one by clicking the sign-up button.
 
 2. Camera interface
 
-   - Play recorded videos: Click the 'load video from file' button to open the selection dialog, then select the video you want to play.
+   - Play recorded videos: Click the 'load video from file' button to open the selection dialog; then, select the video you want to play.
    <br />
    <div align="center">
        <img src="images/playvideo.gif" alt="Logo" width="980" >
@@ -252,7 +252,7 @@ The entry point of the web application is the login page where users can log in 
 
 3. Command execution
 
-   In the command page, there is a code editor where users can in put the script which could be executed in the backend. The acceptable script can only include specified functions and users can view the whole function list by clicking the 'command list' button.
+   In the command page, there is a code editor where users can input the script which could be executed in the backend. The acceptable script can only include specified functions and users can view the whole function list by clicking the 'command list' button.
 
    <br />
    <div align="center">
@@ -280,7 +280,7 @@ The entry point of the web application is the login page where users can log in 
 
   - Then, open the the setting panel to open the parameters form to set the parameters used in this experiment.
 
-  - when ready, click the 'submit' button to submit these parameters to the server.
+  - When ready, click the 'submit' button to submit these parameters to the server.
 
   - User can also see the parameter details by clicking the 'parameter info' button.
 
@@ -291,15 +291,15 @@ The entry point of the web application is the login page where users can log in 
   </div>
   <br />
 
-  > **_NOTE:_** When the experiment is finished, a folder containing all the images of the experiment will be created in the amp folder and a csv data file containing the tuned amplitudes data will be created in the tunedAmo folder. The data file will be useful in the following experiments.
+  > **_NOTE:_** When the experiment is finished, a folder containing all the images of the experiment will be created in the amp folder and a csv data file containing the tuned amplitudes data will be created in the tunedAmp folder. The data file will be useful in the following experiments.
 
-- <a href="#Data Collecting">Data Collecting</a> : after finishing the amplitude experiment, users can collect the data of particle positions and displacements produced by signals of the amplitudes resulted from the amplitude experiment. The experiment results in a csv data file containing the displacements data of particles across the plate excited by signals of different frequencies and the corresponding amplitudes.
+- <a href="#Data Collecting">Data Collecting</a> : After finishing the amplitude experiment, users can collect the data of particle positions and displacements produced by signals of the amplitudes resulted from the amplitude experiment. The experiment results in a csv data file containing the displacement data of particles across the plate excited by signals of different frequencies and the corresponding amplitudes.
 
   - First, open the camera in the camera page.
 
-  - Then, open the the setting panel to open the parameters form to set the parameters used in this experiment. There is one parameter to specify the file name of the tuned amplitude data file achieved from the <a href="#Amplitude experiment">Amplitude experiment</a>. So, in order to run this experiment, there must be at least one tune amplitude data file in the specified folder.
+  - Then, open the the setting panel to open the parameters form to set the parameters used in this experiment. There is one parameter to specify the file name of the tuned amplitude data file achieved from the <a href="#Amplitude experiment">Amplitude experiment</a>. So, in order to run this experiment, there must be at least one tuned amplitude data file in the specified folder.
 
-  - when ready, click the 'submit' button to submit these parameters to the server.
+  - When ready, click the 'submit' button to submit these parameters to the server.
 
   - Finally, click the 'start data collecting' button to start the experiment.
 
@@ -311,7 +311,7 @@ The entry point of the web application is the login page where users can log in 
 
   > **_NOTE:_** When the experiment is finished, a folder containing all the images of the experiment will be created in the DataCollecting folder and a csv data file containing the collected displacement data will be created in the DataCollecting folder. The data file will be useful in the following experiment.
 
-- <a href="#Model fitting">Model fitting</a>: Model fitting is the final preparation step before conducting the object manipulation experiment: the collected displacement data is fitted to a statistical model using the [LOWESS](https://www.itl.nist.gov/div898/handbook/pmd/section1/pmd144.htm) method (with degree=2, span=0.5).
+- <a href="#Model fitting">Model fitting</a>: Model fitting is the final preparation step before conducting an object manipulation experiment: the collected displacement data is fitted to a statistical model using the [LOWESS](https://www.itl.nist.gov/div898/handbook/pmd/section1/pmd144.htm) method (with degree=2, span=0.5).
 
   - First, choose the displacement data file achived from the <a href="#Data Collecting">Data Collecting</a>.
 
@@ -322,9 +322,9 @@ The entry point of the web application is the login page where users can log in 
   </div>
   <br />
 
-  > **_NOTE:_** The out put of this experiment will be a fitted model file in the ModelFitting folder.
+  > **_NOTE:_** The output of this experiment will be a fitted model file in the ModelFitting folder.
 
-- <a href="#Object manipulation">Object manipulation</a>: The final goal of this project is that user can perform object manipulation experiment on the vibrating plate through the web application.
+- <a href="#Object manipulation">Object manipulation</a>: The final goal of this project is that the user can perform an object manipulation experiment on the vibrating plate through the web application.
 
   - Open the Controller editor to edit your own controller if you want. The controller function must keep a specific form (the name and the arguments).
 
@@ -433,25 +433,21 @@ The backend code is contained in this repository and its structure is shown in t
     |-- video
     |--images
 ```
+- The acobot.yaml file is used to create the virtual environment for the application using conda.
 
-- The acobot.yaml is used to create the virtual environment for the application using conda.
-
-- The FlyCapture_2.13.3.31_x64.exe and PyCapture2-2.13.61.win-amd64-py3.6.msi files are the installer files for the pyCapture package.
-
-- The server.py file in the top-level folder is used to launch the application.
+- The server.py file in a top-level folder used to launch the application.
 
 - The config.py file is used to specify configuration options for the application.
 
-- The amplitude_experiment_parameters.json, commandDoc.txt, config.py and dict.txt files are used inside the application.
+- The amplitude_experiment_parameters.json, commandDoc.txt, config.py, and dict.txt files are used inside the application.
 
 - The build folder in the top-level folder contains the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) of the frontend part of the application which is created with command [npm run build](https://github.com/facebook/create-react-app#npm-run-build-or-yarn-build) in the [frontend part](https://version.aalto.fi/gitlab/acobotwebversion/acobot_frontend.git).
 
-- The app folder contains the source code which contains the api folder and the hardware folder which contains scripts needed when run different experiment, e.g, the ampMain.py is used to start the <a href="#Amplitude experiment">Amplitude experiment</a>.
-  And the api folder contains the the route functions for endpoint, e.g., the ampExp folder contains the route functions related to the request to the <a href="#Amplitude experiment">Amplitude experiment</a>.
+- The app folder contains the source code which contains the api folder and the hardware folder which contains scripts needed to run different experiments, e.g., the ampMain.py is used to start the <a href="#Amplitude experiment">Amplitude experiment</a>.
 
-- The rest of the other folders in the root folder contain the results of the experiments. For example, the ampExp folder contains the result of the <a href="#Amplitude experiment">Amplitude experiment</a>.
+- The rest of the folders in the root folder containing the results of the experiments. For example, the ampExp folder contains the results of the <a href="#Amplitude experiment">Amplitude experiment</a>.
 
-Developers can change the specific code in the app folder then restart the server.py again.
+Developers can change the specific code in the app folder and then restart the server.py again.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <br/>
